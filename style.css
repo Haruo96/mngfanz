@@ -1,4 +1,61 @@
 /* Basic reset + fonts */
+/* ============================= */
+/* 📱 Mobile Responsive Tweaks   */
+/* ============================= */
+@media (max-width: 768px) {
+  /* 1. Sidebar & Bottom Nav */
+  .sidebar {
+    display: none; /* Hide sidebar on phones */
+  }
+  .bottom-nav {
+    display: flex; /* Show bottom nav only on mobile */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: white;
+    border-top: 1px solid #ddd;
+    justify-content: space-around;
+    padding: 10px 0;
+    z-index: 1000;
+  }
+
+  /* 2. Layout adjustments (feed, discover, etc.) */
+  .feed,
+  .discover,
+  .profile,
+  .messages,
+  .settings {
+    grid-template-columns: 1fr !important; /* Single column */
+  }
+
+  .card {
+    margin-bottom: 1rem; /* Extra spacing for stacking */
+  }
+
+  /* 3. Modals (full screen on mobile) */
+  .modal {
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    max-width: none !important;
+    border-radius: 0 !important;
+  }
+
+  /* 4. Text & buttons scale down */
+  h2, h3 {
+    font-size: 1.2rem;
+  }
+  p {
+    font-size: 0.9rem;
+  }
+  button {
+    padding: 8px 14px;
+    font-size: 0.9rem;
+  }
+}
+
 :root{
     --bg:#f8fafc;
     --muted:#6b7280;
