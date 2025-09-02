@@ -4,6 +4,9 @@
 /* ============================= */
 @media (max-width: 768px) {
   /* 1. Sidebar & Bottom Nav */
+   .feed .suggested {
+    display: none;
+  }
   .sidebar {
     display: none; /* Hide sidebar on phones */
   }
